@@ -55,7 +55,10 @@ namespace Projet_poo
                 foreach (Herbivora herbivorAFemale in simulationObjects.OfType<Herbivora>().Where(herbivoraFemale => herbivoraFemale.isMale).ToList())
 
                 {
-
+                    if (herbivoraMale.X == herbivorAFemale.X && herbivoraMale.Y == herbivorAFemale.Y && herbivorAFemale.pregnancy == 0)
+                    {
+                        herbivorAFemale.pregnancy++;
+                    }
                 }
 
             }
