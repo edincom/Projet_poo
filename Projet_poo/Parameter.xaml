@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:Projet_poo"
+             x:Class="Projet_poo.Parameter"
+             Title="Parameter">
+
+    <ContentPage.Resources>
+        <drawable:Simulation x:Key="simulation" />
+    </ContentPage.Resources>
+
+    
+    
+    <ScrollView>
+
+        <Grid Padding="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Simulation" FontSize="20" HorizontalOptions="Center" />
+
+
+            <Frame BorderColor="Black" Padding="5">
+                <GraphicsView x:Name="graphics" Drawable="{StaticResource simulation}" HeightRequest="1500" WidthRequest="1500" />
+            </Frame>
+
+            <Label Text="Simulation" FontSize="20" HorizontalOptions="Center" />
+
+        </Grid>
+        
+
+    </ScrollView>
+</ContentPage>
